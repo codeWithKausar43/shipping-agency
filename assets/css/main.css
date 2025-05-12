@@ -157,24 +157,36 @@ h6 {
 .header {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 15px 0;
+  padding: 4px 0px;
   transition: all 0.5s;
   z-index: 997;
+}
+
+.container-fluid {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .header .logo {
   line-height: 1;
 }
 
-.header .logo img{
-  max-height: 32px;
-  margin-right: 8px;
+.header .logo img {
+  width: 230px;
+  height: 100%;
+  object-fit: cover;
 }
-.header .logo #navLogo{
-  max-height: 55px;
-  margin-right: 8px;
+
+#rightLogo {
+  width: 230px;
+  height: 100%;
+  object-fit: cover;
 }
- 
+
+.header .logo #navLogo {
+  max-height: 100%;
+}
+
 .header .logo h1 {
   font-size: 30px;
   margin: 0;
@@ -185,6 +197,7 @@ h6 {
 .scrolled .header {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -311,11 +324,26 @@ h6 {
     transition: color 0.3s;
   }
 
+  #rightLogo {
+    display: none;
+  }
+ 
+  .navmenu {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .mobile-nav-toggle {
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+    margin-left: auto;
+  }
   .navmenu {
     padding: 0;
     z-index: 9997;
   }
-
   .navmenu ul {
     display: none;
     list-style: none;
